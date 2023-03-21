@@ -11,7 +11,7 @@ const Feed = (props) => {
 
   const getWork = () => {
     axios({
-      url: "https://digital-work-portofolio-backend-dqqyref3k-onionpowder01.vercel.app/get-work",
+      url: "https://digital-work-portofolio-backend.onrender.com/get-work",
       method: "GET",
     }).then((res) => {
       setWork(res.data);

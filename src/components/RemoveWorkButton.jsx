@@ -6,7 +6,7 @@ const RemoveWorkButton = (props) => {
   const deleteWork = async (objectId) => {
     try {
       const response = await axios.get(
-        `https://digital-work-portofolio-backend-dqqyref3k-onionpowder01.vercel.app/remove?uid=${objectId}`
+        `https://digital-work-portofolio-backend.onrender.com/remove?uid=${objectId}`
       );
       props.setFetchWork((prevCount) => prevCount + 1);
       console.log("Server response: ", response);
