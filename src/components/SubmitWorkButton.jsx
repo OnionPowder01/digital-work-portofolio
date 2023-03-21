@@ -12,7 +12,7 @@ const SubmitWorkButton = (props) => {
 
     try {
       const response = await axios.post(
-        "https://digital-work-portofolio-backend.vercel.app/publish",
+        "https://digital-work-portofolio-backend-6ozxm2b4w-onionpowder01.vercel.app/publish",
         formData
       );
       props.setFetchWork((prevCount) => prevCount + 1);
