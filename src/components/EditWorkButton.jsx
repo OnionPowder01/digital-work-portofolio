@@ -15,7 +15,7 @@ const EditWorkButton = (props) => {
         
         try {
           const response = await axios.post(
-            "http://localhost:5000/update",
+            "https://digital-work-portofolio-backend.vercel.app/update",
             formData
           );
           props.setFetchWork((prevCount) => prevCount + 1);
