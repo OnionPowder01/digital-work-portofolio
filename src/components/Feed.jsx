@@ -11,7 +11,7 @@ const Feed = (props) => {
 
   const getWork = () => {
     axios({
-      url: "https://backend-eafh.onrender.com/get-work",
+      url: "https://onionpowder01.pythonanywhere.com/get-work",
       method: "GET",
     }).then((res) => {
       setWork(res.data);
