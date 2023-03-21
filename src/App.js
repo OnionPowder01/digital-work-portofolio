@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import DrawerSidebar from './components/DrawerSidebar'
+import Feed from './components/Feed'
+import './index.css'
+
+
 
 function App() {
+  const [fetchWork, setFetchWork ] = useState(0)
+  const [openEditModal, setOpenEditModal] = useState(false)
+  const [openDrawer, setOpenDrawer] = useState(false)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <>
+ <DrawerSidebar fetchWork={fetchWork} setFetchWork={setFetchWork} openEditModal={openEditModal} setOpenEditModal={setOpenEditModal} openDrawer={openDrawer} setOpenDrawer={setOpenDrawer}/>
+ <Feed fetchWork={fetchWork} setFetchWork={setFetchWork} openEditModal={openEditModal} setOpenEditModal={setOpenEditModal} openDrawer={openDrawer} setOpenDrawer={setOpenDrawer}/>
+ </>
+  )
 }
 
 export default App;
