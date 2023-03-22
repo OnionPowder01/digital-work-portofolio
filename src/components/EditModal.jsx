@@ -10,7 +10,6 @@ const EditModal = (props) => {
         onClose={() => props.setOpenEdit(false)}
         title="Edit Your Work Content"
         size="auto"
-        
         centered
       >
         <DrawerContent
