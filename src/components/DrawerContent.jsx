@@ -73,7 +73,15 @@ const DrawerContent = (props) => {
         direction="row"
         wrap="nowrap"
       >
-        {props.openEdit && (
+        {props.openEdit ? (
+          <EditWorkButton
+            projectData={projectData}
+            setFetchWork={props.setFetchWork}
+            close={props.close}
+            id={props.uid}
+            setOpenEdit={props.setOpenEdit}
+          />
+        ) : (
           <SubmitWorkButton
             projectData={projectData}
             setFetchWork={props.setFetchWork}
@@ -81,13 +89,6 @@ const DrawerContent = (props) => {
             id={id}
           />
         )}
-        <EditWorkButton
-          projectData={projectData}
-          setFetchWork={props.setFetchWork}
-          close={props.close}
-          id={props.uid}
-          setOpenEdit={props.setOpenEdit}
-        />
       </Flex>
     </>
   );
