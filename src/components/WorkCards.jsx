@@ -7,7 +7,6 @@ import RemoveWorkButton from "./RemoveWorkButton";
 
 const WorkCards = (props) => {
   const [opened, { open, close }] = useDisclosure(false);
-  const [openEdit, setOpenEdit] = useState(false);
   return (
     <>
       <Card shadow="sm" padding="xl" component="a" target="_blank">
@@ -23,7 +22,7 @@ const WorkCards = (props) => {
           {props.projectLink}
         </Text>
         <div className="flex-buttons">
-        <Button variant="subtle" color="dark" onClick={() => setOpenEdit(true)}>Edit</Button>
+        <Button variant="subtle" color="dark" onClick={() => props.setOpenEditModal(true)}>Edit</Button>
         <RemoveWorkButton
           fetchWork={props.fetchWork}
           setFetchWork={props.setFetchWork}
@@ -36,8 +35,8 @@ const WorkCards = (props) => {
       </Card>
       
       <EditModal
-        openEdit={openEdit}
-        setOpenEdit={setOpenEdit}
+        openEdit={props.openEditModal}
+        setOpenEdit={props.setOpenEditModal}
         fetchWork={props.fetchWork}
         setFetchWork={props.setFetchWork}
         projectImage={props.projectImage}
