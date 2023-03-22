@@ -80,13 +80,13 @@ const DrawerContent = (props) => {
             close={props.close}
             id={id}
           />
-          {props.openEditModal && (<EditWorkButton
+          {props.openEdit && (<EditWorkButton
             projectData={projectData}
             setFetchWork={props.setFetchWork}
             close={props.close}
             id={props.uid}
             setOpenEdit={props.setOpenEdit}
-          />)
+          />) 
         }
         </Flex> 
 

@@ -6,10 +6,11 @@ const EditModal = (props) => {
   return (
     <Flex justify="center" align="center">
       <Modal
-        opened={props.openEditModal}
-        onClose={() => props.setOpenEditModal(false)}
+        opened={props.openEdit}
+        onClose={() => props.setOpenEdit(false)}
         title="Edit Your Work Content"
         size="auto"
+        
         centered
       >
         <DrawerContent
@@ -19,7 +20,8 @@ const EditModal = (props) => {
           projectName={props.projectName}
           projectLink={props.projectLink}
           uid={props.uid}
-          setOpenEditModal={props.setOpenEditModal}
+          setOpenEdit={props.setOpenEdit}
+          openEdit={props.openEdit}
         />
       </Modal>
     </Flex>
