@@ -26,7 +26,6 @@ const DrawerContent = (props) => {
     projectLink: props.projectLink,
     projectImage: props.projectImage,
   });
-  console.log(projectData);
 
   useEffect(() => {
     if (imageLink) {
@@ -41,7 +40,6 @@ const DrawerContent = (props) => {
     setProjectData({ ...projectData, [name]: value });
   };
 
-  console.log(props.openEdit)
   return (
     <>
       <div>
@@ -66,33 +64,31 @@ const DrawerContent = (props) => {
       <div className="dropzone-button">
         <DropzoneButton imageLink={imageLink} handleDrop={handleDrop} />
       </div>
-     
-        <Flex
-          mih={50}
-          gap="lg"
-          justify="center"
-          align="center"
-          direction="row"
-          wrap="nowrap"
-        >
+
+      <Flex
+        mih={50}
+        gap="lg"
+        justify="center"
+        align="center"
+        direction="row"
+        wrap="nowrap"
+      >
+        {props.openEdit && (
           <SubmitWorkButton
             projectData={projectData}
             setFetchWork={props.setFetchWork}
             close={props.close}
             id={id}
           />
-          {props.openEdit && (<EditWorkButton
-            projectData={projectData}
-            setFetchWork={props.setFetchWork}
-            close={props.close}
-            id={props.uid}
-            setOpenEdit={props.setOpenEdit}
-          />) 
-        }
-        </Flex> 
-
-        
-      
+        )}
+        <EditWorkButton
+          projectData={projectData}
+          setFetchWork={props.setFetchWork}
+          close={props.close}
+          id={props.uid}
+          setOpenEdit={props.setOpenEdit}
+        />
+      </Flex>
     </>
   );
 };
