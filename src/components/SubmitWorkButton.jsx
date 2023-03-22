@@ -12,7 +12,7 @@ const SubmitWorkButton = (props) => {
 
     try {
       const response = await axios.post(
-        "https://onionpowder01.pythonanywhere.com/publish",
+        "https://backend-app-57xj.onrender.com/publish",
         formData
       );
       props.setFetchWork((prevCount) => prevCount + 1);

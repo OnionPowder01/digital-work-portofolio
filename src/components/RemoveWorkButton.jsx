@@ -6,7 +6,7 @@ const RemoveWorkButton = (props) => {
   const deleteWork = async (objectId) => {
     try {
       const response = await axios.get(
-        `https://onionpowder01.pythonanywhere.com/remove?uid=${objectId}`
+        `https://backend-app-57xj.onrender.com/remove?uid=${objectId}`
       );
       props.setFetchWork((prevCount) => prevCount + 1);
       console.log("Server response: ", response);

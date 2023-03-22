@@ -15,7 +15,7 @@ const EditWorkButton = (props) => {
         
         try {
           const response = await axios.post(
-            "https://onionpowder01.pythonanywhere.com/update",
+            "https://backend-app-57xj.onrender.com/update",
             formData
           );
           props.setFetchWork((prevCount) => prevCount + 1);
