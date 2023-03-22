@@ -41,6 +41,7 @@ const DrawerContent = (props) => {
     setProjectData({ ...projectData, [name]: value });
   };
 
+  console.log(props.openEdit)
   return (
     <>
       <div>
