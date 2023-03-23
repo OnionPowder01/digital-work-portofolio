@@ -10,7 +10,7 @@ const Feed = (props) => {
 
   const getWork = () => {
     axios({
-      url: "http://localhost:5000/get-work",
+      url: "https://backend-app-57xj.onrender.com/get-work",
       method: "GET",
     }).then((res) => {
       setWork(res.data);
