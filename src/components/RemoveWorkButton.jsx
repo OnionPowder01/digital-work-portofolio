@@ -19,7 +19,7 @@ const RemoveWorkButton = (props) => {
 
   const openDeleteModal = () =>
     modals.openConfirmModal({
-      title: "Delete your profile",
+      title: "Delete your work",
       centered: true,
       children: (
         <Text size="sm">
