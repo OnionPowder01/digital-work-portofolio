@@ -1,43 +1,44 @@
+.container {
+    width: 100%;
+}
+
 .project-name-input {
-margin-bottom: 1rem;
-margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .dropzone-button {
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .simplegrid-container {
-    margin-top: 20px;
-   
+  margin-top: 20px;
 }
 
 .close-button {
-    margin-bottom: -3px;
+  margin-bottom: -3px;
 }
 
 .flex-buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-
 .mantine-Modal-inner {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .mantine-11q5icf {
-    display: none;
+  display: none;
 }
 
-
-@media only screen and (max-width: 768px){
-    .flex-buttons {
-        justify-content: center;
-    }
-    .mantine-Modal-inner {
-        width: 90%;
-        margin-left: 10px;
-    }
+@media only screen and (max-width: 768px) {
+  .flex-buttons {
+    justify-content: center;
   }
+  .mantine-Modal-inner {
+    width: 90%;
+    margin-left: 10px;
+  }
+}

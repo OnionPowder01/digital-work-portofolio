@@ -12,7 +12,7 @@ function App() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
-    <>
+    <div className="container">
       <MantineProvider withNormalizeCSS withGlobalStyles>
         <ModalsProvider >
         <Notifications />
@@ -34,7 +34,7 @@ function App() {
         />
         </ModalsProvider>
       </MantineProvider>
-    </>
+      </div>
   );
 }
 
