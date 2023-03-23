@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
 import { Button } from '@mantine/core';
+import { WorkNotification } from "./WorkNotification"
 
 
 const EditWorkButton = (props) => {
-  console.log(props.setFetchWork)
+
 
     const editWork = async (objectId) => {
         const formData = new FormData();
@@ -15,11 +16,12 @@ const EditWorkButton = (props) => {
         
         try {
           const response = await axios.post(
-            "https://backend-app-57xj.onrender.com/update",
+            "http://localhost:5000/update",
             formData
           );
           props.setFetchWork((prevCount) => prevCount + 1);
           props.setOpenEdit(false);
+          WorkNotification()
           console.log("Server response: ", response);
         } catch (err) {
           console.log("Error: ", err);

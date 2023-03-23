@@ -1,8 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { Button } from '@mantine/core';
+import { WorkNotification } from "./WorkNotification";
+
 
 const SubmitWorkButton = (props) => {
+
+  
   const submitWork = async () => {
     const formData = new FormData();
     formData.append("uid", props.id);
@@ -12,12 +16,13 @@ const SubmitWorkButton = (props) => {
 
     try {
       const response = await axios.post(
-        "https://backend-app-57xj.onrender.com/publish",
+        "http://localhost:5000/publish",
         formData
       );
       props.setFetchWork((prevCount) => prevCount + 1);
       console.log("Server response: ", response);
       props.close();
+      WorkNotification()
     } catch (err) {
       console.log("Error: ", err);
     }
@@ -29,3 +34,4 @@ const SubmitWorkButton = (props) => {
 };
 
 export default SubmitWorkButton;
+
