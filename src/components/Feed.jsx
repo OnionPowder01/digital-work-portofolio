@@ -8,13 +8,13 @@ const Feed = (props) => {
   const [work, setWork] = useState([]);
   const [showPortofolio, setShowPortofolio] = useState(false);
 
-  const getWork = () => {
-    axios({
-      url: "https://backend-app-57xj.onrender.com/get-work",
-      method: "GET",
-    }).then((res) => {
-      setWork(res.data);
-    });
+  const getWork = async () => {
+    try {
+      const response = await axios.get("https://backend-app-57xj.onrender.com/get-work");
+      setWork(response.data);
+    } catch(error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
